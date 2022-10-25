@@ -135,17 +135,40 @@ function quroum_widgets_init() {
 add_action( 'widgets_init', 'quroum_widgets_init' );
 
 /**
+ * Admin bar margin top remove
+ */
+add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
+
+/**
  * Enqueue scripts and styles.
  */
 function quroum_scripts() {
 	wp_enqueue_style( 'quroum-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'quroum-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'quroum-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// Adobe Fonts
+	wp_enqueue_style( 'quorum-fonts', 'https://use.typekit.net/twc8agw.css', array(), _S_VERSION );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	// Custom css
+	wp_enqueue_style( 'quorum-custom-style', get_template_directory_uri() . '/css/custom.css', array(), _S_VERSION );
+
+	// jQuery
+	wp_register_script( 'quorum-jquery', get_template_directory_uri() . '/plugins/jQuery/jquery-3.6.0.min.js', null, null, true);
+	wp_enqueue_script( 'quorum-jquery' );
+
+	// Slick
+	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/plugins/slick/slick.css', false);
+	wp_register_script( 'slick-script', get_template_directory_uri() . '/plugins/slick/slick.min.js', null, null, true );
+	wp_enqueue_script('slick-script');
+
+	// Custom scripts
+	wp_register_script( 'quorum-custom-scripts', get_template_directory_uri() . '/js/custom.js', null, null, true);
+	wp_enqueue_script( 'quorum-custom-scripts' );
+	wp_localize_script( 'quorum-custom-scripts', 'quorum', array('ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+
+	// Sliders
+	wp_register_script( 'quorum-sliders', get_template_directory_uri() . '/js/_sliders.js', null, null, true);
+	wp_enqueue_script( 'quorum-sliders' );
+	
 }
 add_action( 'wp_enqueue_scripts', 'quroum_scripts' );
 

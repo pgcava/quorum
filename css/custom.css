@@ -1,0 +1,73 @@
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1630px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+/**
+ *	Global
+ */
+/**
+ *	Partials
+ */
+/**
+ *	Subpages
+ */
+#wpadminbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  transition: ease 0.3s;
+}
+#wpadminbar:hover {
+  opacity: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  transition: ease 0.3s;
+  outline: none !important;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=custom.css.map */

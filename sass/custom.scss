@@ -1,0 +1,48 @@
+/**
+ *	Global
+ */
+@use 'global/grid';
+@use 'global/variables' as v;
+
+/**
+ *	Partials
+ */
+@use 'partials/siteHeader';
+@use 'partials/siteFooter';
+
+/**
+ *	Subpages
+ */ 
+@use 'subpages/home';
+
+#wpadminbar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: .2;
+	transition: ease .3s;
+
+	&:hover{
+		opacity: 1;
+	}
+}
+ 
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'montserrat', sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+
+	&.no-scroll{
+		overflow: hidden;
+	}
+}
+
+a{
+	transition: ease .3s;
+	outline: none !important;
+	text-decoration: none;
+}
