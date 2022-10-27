@@ -254,6 +254,75 @@ get_header(); ?>
             </div>
         </div>
     </section>
+    <section class="homeTeam">
+        <div class="homeTeam__wrap container">
+            <div class="homeTeam__heading">
+                <p class="lead">Special</p>
+                <h2>Meet the Quorum Team</h2>
+            </div>
+            <div class="homeTeam__list">
+                <article class="teammate">
+                    <div class="teammate__image">
+                        <img src="<?php echo get_template_directory_uri() . '/images/homepage/teammate_01.webp'; ?>"/>
+                        <a href="#" target="_blank" class="teammate__social"></a>
+                    </div>
+                    <div class="teammate__info">
+                        <h3>Patryk Czernik</h3>
+                        <p>Office Leasing Director</p>
+                    </div>
+                </article>
+                <article class="teammate">
+                    <div class="teammate__image">
+                        <img src="<?php echo get_template_directory_uri() . '/images/homepage/teammate_02.webp'; ?>"/>
+                        <a href="#" target="_blank" class="teammate__social"></a>
+                    </div>
+                    <div class="teammate__info">
+                        <h3>Anna Lagowska-Cioch</h3>
+                        <p>Head of Residential Sales</p>
+                    </div>
+                </article>
+                <article class="teammate">
+                    <div class="teammate__image">
+                        <img src="<?php echo get_template_directory_uri() . '/images/homepage/teammate_03.webp'; ?>"/>
+                        <a href="#" target="_blank" class="teammate__social"></a>
+                    </div>
+                    <div class="teammate__info">
+                        <h3>Kamil Dolat</h3>
+                        <p>Real Estate Agent</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="homeForm">
+        <div class="homeForm__wrap">
+            <form class="visitForm">
+                <div class="visitForm__heading">
+                    <p class="lead">Quorum Apartments</p>
+                    <h2>Request a Visit</h2>
+                </div>
+                <div class="visitForm__row">
+                    <input type="text" placeholder="Name" name="visitName" />
+                </div>
+                <div class="visitForm__row">
+                    <input type="email" placeholder="Email" name="visitEmail" />
+                </div>
+                <div class="visitForm__row">
+                    <input type="phone" placeholder="Telephone" name="visitPhone" />
+                </div>
+                <div class="visitForm__row visitForm__row--half">
+                    <input type="text" placeholder="DD.MM.YYYY" name="visitDate" />
+                    <input type="text" placeholder="HH.MM" name="visitHour" />
+                </div>
+                <div class="visitForm__submit">
+                    <button type="submit"><span>Contact</span></button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <div class="divider"></div>
+
 </main>
 
 <?php get_footer(); ?>
