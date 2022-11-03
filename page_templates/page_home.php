@@ -9,7 +9,7 @@ get_header(); ?>
         <div class="homeHeader__wrap container">
             <div class="title">
                 <h1>Quorum <span>The meeting place</span></h1>
-                <a href="#"><span>Schedue a visit</span></a>
+                <a href="#"><span>Spotkajmy się</span></a>
             </div>
         </div>
     </section>
@@ -28,16 +28,16 @@ get_header(); ?>
             </div>
             <div class="homeOverview__content">
                 <div class="heading">
-                    <p class="lead">Overview</p>
-                    <h2>Modern Offices and Premium Apartments</h2>
+                    <p class="lead">Quorum</p>
+                    <h2>Nowoczesne Biura i Apartamenty Premium</h2>
                 </div>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet , consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris</p>
-                    <p>Lorem ipsum dolor sit amet , consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris</p>
+                    <p>Quorum to największy na Dolnym Śląsku projekt typu mixed-use. Kompleks pięciu budynków, o funkcji biurowej i mieszkaniowej usytuowany jest w ścisłym centrum, nad Odrą przy ul. Sikorskiego na wrocławskim Szczepinie.</p>
+                    <p>Poza 341 mieszkaniami od Resi Capital znajdą się tu między innymi przestrzenie usługowe i biurowe, uzupełnione strefami zieleni i relaksu, tak, aby jak najlepiej odpowiedzieć na potrzeby rozwijającego się miasta i jego mieszkańców. Dowiedz się więcej:</p>
                 </div>
                 <div class="actions">
-                    <a href="#"><span>Residential</span></a>
-                    <a href="#"><span>Office</span></a>
+                    <a href="#"><span>Mieszkania</span></a>
+                    <a href="#"><span>Biura</span></a>
                 </div>
             </div>
         </div>
@@ -45,33 +45,33 @@ get_header(); ?>
     <section class="homeInfo">
         <div class="homeInfo__wrap container">
             <div class="homeInfo__heading">
-                <p class="lead">The meeting place</p>
-                <h2>Discover Quorum</h2>
+                <p class="lead">Nowe miejsce spotkań</p>
+                <h2>Poznaj Quorum</h2>
             </div>
             <div class="homeInfo__list">
                 <div class="box">
                     <h3>106 280</h3>
-                    <p>Total Office GLA</p>
+                    <p>łącznej powierzchni GLA</p>
                 </div>
                 <div class="box">
                     <h3>1 220</h3>
-                    <p>Car parking for office</p>
+                    <p>miejsc parkingowych dla biur</p>
                 </div>
                 <div class="box">
                     <h3>7 000</h3>
-                    <p>Terraces area</p>
+                    <p>powierzchni tarasów</p>
                 </div>
                 <div class="box">
                     <h3>330</h3>
-                    <p>Apartments</p>
+                    <p>mieszkań</p>
                 </div>
                 <div class="box">
                     <h3>334</h3>
-                    <p>Car parking for residence</p>
+                    <p>miejsc parkingowych dla mieszkańców</p>
                 </div>
                 <div class="box">
                     <h3>3 000</h3>
-                    <p>Service area</p>
+                    <p>powierzchni usługowej</p>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@ get_header(); ?>
         <div class="homeApartments__wrap container">
             <div class="homeApartments__heading">
                 <p class="lead">Quorum apartments</p>
-                <h2>Choose an Apartment</h2>
+                <h2>Wybierz swoje wymarzone mieszkanie</h2>
             </div>
             <div class="homeApartments__list">
                 <?php while(have_rows('homeApartments')): the_row(); 
@@ -98,10 +98,10 @@ get_header(); ?>
                     </div>
                     <div class="apartment__info">
                         <div class="pos">
-                            <p><b><?php echo $rooms; ?></b> room<?php if($rooms > 1): ?>s<?php endif; ?></p>
+                            <p><b><?php echo $rooms; ?></b> <?php if($rooms == 1): ?>pokój<?php elseif($rooms > 1 && $rooms < 5): ?>pokoje<?php elseif($rooms == 5): ?>pokoi<?php endif; ?></p>
                         </div>
                         <div class="pos">
-                            <p><b><?php echo $floor; ?></b><sup><?php if($floor == 1): ?>st<?php elseif($floor == 2): ?>nd<?php elseif($floor >= 3): ?>th<?php endif; ?></sup> floor</p>
+                            <p><b><?php echo $floor; ?></b> piętro</p>
                         </div>
                         <div class="pos">
                             <p><b><?php echo $meters; ?></b> m2</p>
@@ -111,13 +111,13 @@ get_header(); ?>
                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                     </div>
                     <div class="apartment__actions">
-                        <a href="<?php echo $url; ?>"><span>More info</span></a>
+                        <a href="<?php echo $url; ?>"><span>Więcej informacji</span></a>
                     </div>
                 </article>
                 <?php endwhile; ?>
             </div>
             <div class="homeApartments__actions">
-                <a href="#"><span>Check other apartments</span></a>
+                <a href="#"><span>Więcej mieszkań</span></a>
             </div>
         </div>
     </section>
@@ -130,16 +130,16 @@ get_header(); ?>
             </div>
             <div class="homeFeatured__content">
                 <div class="heading">
-                    <p class="lead">Featured</p>
-                    <h2>Values of living in Quorum Apartments</h2>
+                    <p class="lead">Kompleks</p>
+                    <h2>Zalety mieszkania w Quorum Apartments</h2>
                 </div>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                    <p>Wyjątkowa lokalizacja, panoramiczne widoki i bezpośredni dostęp do stref relaksu, między innymi na nowo tworzonej promenadzie nad rzeką – to tylko niektóre zalety projektu Quorum.</p>
                 </div>
                 <div class="list">
-                    <p class="pos">Restaurants</p>
-                    <p class="pos">Services</p>
-                    <p class="pos">Boulevards</p>
+                    <p class="pos">Bulwary i promenada</p>
+                    <p class="pos">Zielone tarasy</p>
+                    <p class="pos">Usługi</p>
                 </div>
             </div>
         </div>
@@ -150,23 +150,38 @@ get_header(); ?>
             <form class="visitForm">
                 <div class="visitForm__heading">
                     <p class="lead">Quorum Apartments</p>
-                    <h2>Request a Visit</h2>
+                    <h2>Umów wizytę</h2>
                 </div>
                 <div class="visitForm__row">
-                    <input type="text" placeholder="Name" name="visitName" />
+                    <input type="text" placeholder="Imię i nazwisko" name="visitName" />
                 </div>
                 <div class="visitForm__row">
                     <input type="email" placeholder="Email" name="visitEmail" />
                 </div>
                 <div class="visitForm__row">
-                    <input type="phone" placeholder="Telephone" name="visitPhone" />
+                    <input type="phone" placeholder="Telefon" name="visitPhone" />
+                </div>
+                <div class="visitForm__row">
+                    <p>Interesują mnie:</p>
+                    <div class="options">
+                        <div class="options__option checked radioEngine">
+                            <input type="radio" name="visitType" value="residences" checked/>
+                            <div class="checker"></div>
+                            <label>Mieszkania</label>
+                        </div>
+                        <div class="options__option radioEngine">
+                            <input type="radio" name="visitType" value="offices"/>
+                            <div class="checker"></div>
+                            <label>Biura</label>
+                        </div>
+                    </div>
                 </div>
                 <div class="visitForm__row visitForm__row--half">
-                    <input type="text" placeholder="DD.MM.YYYY" name="visitDate" />
-                    <input type="text" placeholder="HH.MM" name="visitHour" />
+                    <input type="text" placeholder="DD.MM.RRRR" name="visitDate" />
+                    <input type="text" placeholder="GG.MM" name="visitHour" />
                 </div>
                 <div class="visitForm__submit">
-                    <button type="submit"><span>Contact</span></button>
+                    <button type="submit"><span>Umów spotkanie</span></button>
                 </div>
             </form>
         </div>
@@ -187,12 +202,12 @@ get_header(); ?>
             </div>
             <div class="homeOverview__content">
                 <div class="heading">
-                    <p class="lead">Quorum offices</p>
-                    <h2>Modern Offices near Odra River</h2>
+                    <p class="lead">Quorum centrum biznesowe</p>
+                    <h2>Nowoczesne biura nad odrą</h2>
                 </div>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet , consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris</p>
-                    <p>Lorem ipsum dolor sit amet , consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris</p>
+                    <p>W skład Quorum wchodzą m. in. cztery budynki biurowe, które dostarczą na wrocławski rynek ponad 90 tys m2 GLA. Dzięki zastosowanym energooszczędnym i ekologicznym rozwiązaniom kompleks spełniać będzie wymogi certyfikacji BREEAM na poziomie Excellent (taką notę otrzymał oddany już do użytku budynek Quorum D).</p>
+                    <p>Dominantą kompleksu będzie wieża biurowa o wysokości 140 metrów, która będzie drugim co do wysokości budynkiem w stoicy Dolnego Śląska.</p>
                 </div>
             </div>
         </div>
@@ -202,52 +217,52 @@ get_header(); ?>
         <div class="homeTable__wrap container">
             <div class="homeTable__heading">
                 <p class="lead">Office</p>
-                <h2>Check Availability</h2>
+                <h2>Sprawdź dostępność</h2>
             </div>
             <div class="homeTable__table">
                 <table class="table" border="0">
                     <thead>
                         <tr>
-                            <th width="10%">Building</th>
-                            <th width="10%">SQ. FT.</th>
-                            <th width="10%">Office rent</th>
-                            <th width="10%">Operation cost</th>
-                            <th width="10%">Parking space</th>
-                            <th width="10%">Floor plan</th>
+                            <th width="10%">Budynek</th>
+                            <th width="10%">Powierzchnia</th>
+                            <th width="10%">Wynajem biura</th>
+                            <th width="10%">Koszt operacyjny</th>
+                            <th width="10%">Miejsce parkingowe</th>
+                            <th width="10%">Plan piętra</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><b>Quorum A</b></td>
+                            <td>100 m<sup>2</sup></td>
+                            <td>2500 zł</td>
+                            <td>2500 zł</td>
                             <td>100</td>
-                            <td>$500</td>
-                            <td>$500</td>
-                            <td>100</td>
-                            <td><a href="#">View now</a></td>
+                            <td><a href="#">Zobacz plan</a></td>
                         </tr>
                         <tr>
                             <td><b>Quorum B</b></td>
+                            <td>100 m<sup>2</sup></td>
+                            <td>2500 zł</td>
+                            <td>2500 zł</td>
                             <td>100</td>
-                            <td>$500</td>
-                            <td>$500</td>
-                            <td>100</td>
-                            <td><a href="#">View now</a></td>
+                            <td><a href="#">Zobacz plan</a></td>
                         </tr>
                         <tr>
                             <td><b>Quorum D</b></td>
+                            <td>100 m<sup>2</sup></td>
+                            <td>2500 zł</td>
+                            <td>2500 zł</td>
                             <td>100</td>
-                            <td>$500</td>
-                            <td>$500</td>
-                            <td>100</td>
-                            <td><a href="#">View now</a></td>
+                            <td><a href="#">Zobacz plan</a></td>
                         </tr>
                         <tr>
                             <td><b>Quorum E</b></td>
+                            <td>100 m<sup>2</sup></td>
+                            <td>2500 zł</td>
+                            <td>2500 zł</td>
                             <td>100</td>
-                            <td>$500</td>
-                            <td>$500</td>
-                            <td>100</td>
-                            <td><a href="#">View now</a></td>
+                            <td><a href="#">Zobacz plan</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -257,8 +272,8 @@ get_header(); ?>
     <section class="homeTeam">
         <div class="homeTeam__wrap container">
             <div class="homeTeam__heading">
-                <p class="lead">Special</p>
-                <h2>Meet the Quorum Team</h2>
+                <p class="lead">Kontakt</p>
+                <h2>Poznaj nasz zespół</h2>
             </div>
             <div class="homeTeam__list">
                 <article class="teammate">
@@ -297,25 +312,40 @@ get_header(); ?>
     <section class="homeForm">
         <div class="homeForm__wrap">
             <form class="visitForm">
-                <div class="visitForm__heading">
+            <div class="visitForm__heading">
                     <p class="lead">Quorum Apartments</p>
-                    <h2>Request a Visit</h2>
+                    <h2>Umów wizytę</h2>
                 </div>
                 <div class="visitForm__row">
-                    <input type="text" placeholder="Name" name="visitName" />
+                    <input type="text" placeholder="Imię i nazwisko" name="visitName" />
                 </div>
                 <div class="visitForm__row">
                     <input type="email" placeholder="Email" name="visitEmail" />
                 </div>
                 <div class="visitForm__row">
-                    <input type="phone" placeholder="Telephone" name="visitPhone" />
+                    <input type="phone" placeholder="Telefon" name="visitPhone" />
+                </div>
+                <div class="visitForm__row">
+                    <p>Interesują mnie:</p>
+                    <div class="options">
+                        <div class="options__option checked radioEngine">
+                            <input type="radio" name="visitType" value="residences" checked/>
+                            <div class="checker"></div>
+                            <label>Mieszkania</label>
+                        </div>
+                        <div class="options__option radioEngine">
+                            <input type="radio" name="visitType" value="offices"/>
+                            <div class="checker"></div>
+                            <label>Biura</label>
+                        </div>
+                    </div>
                 </div>
                 <div class="visitForm__row visitForm__row--half">
-                    <input type="text" placeholder="DD.MM.YYYY" name="visitDate" />
-                    <input type="text" placeholder="HH.MM" name="visitHour" />
+                    <input type="text" placeholder="DD.MM.RRRR" name="visitDate" />
+                    <input type="text" placeholder="GG.MM" name="visitHour" />
                 </div>
                 <div class="visitForm__submit">
-                    <button type="submit"><span>Contact</span></button>
+                    <button type="submit"><span>Umów spotkanie</span></button>
                 </div>
             </form>
         </div>
