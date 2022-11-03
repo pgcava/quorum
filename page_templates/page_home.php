@@ -4,8 +4,15 @@
      */
 get_header(); ?>
 
+
 <main class="quorum quorum--home">
     <section class="homeHeader">
+        <div class="homeHeader__video">
+            <?php 
+                $src = get_template_directory_uri() . '/images/homepage/video/quorum_heading_video_v2.mp4';
+                echo do_shortcode('[videojs_video url="' . $src . '" autoplay="true" loop="true" muted="true" controls="false"]')
+            ?>
+        </div>
         <div class="homeHeader__wrap container">
             <div class="title">
                 <h1>Quorum <span>The meeting place</span></h1>
@@ -17,13 +24,7 @@ get_header(); ?>
         <div class="homeOverview__wrap container">
             <div class="homeOverview__images">
                 <div class="image">
-                    <img src="<?php echo get_template_directory_uri() . '/images/homepage/overview_01.webp'; ?>" />
-                </div>
-                <div class="image image--fixed">
-                    <div class="image__play">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/play_btn.svg'; ?>" />
-                    </div>
-                    <img src="<?php echo get_template_directory_uri() . '/images/homepage/overview_02.webp'; ?>" />
+                    <img src="<?php echo get_template_directory_uri() . '/images/homepage/segments.png'; ?>" />
                 </div>
             </div>
             <div class="homeOverview__content">
@@ -133,13 +134,28 @@ get_header(); ?>
                     <p class="lead">Kompleks</p>
                     <h2>Zalety mieszkania w Quorum Apartments</h2>
                 </div>
-                <div class="content">
+                <div class="content" data="maincontent">
                     <p>Wyjątkowa lokalizacja, panoramiczne widoki i bezpośredni dostęp do stref relaksu, między innymi na nowo tworzonej promenadzie nad rzeką – to tylko niektóre zalety projektu Quorum.</p>
                 </div>
-                <div class="list">
-                    <p class="pos">Bulwary i promenada</p>
-                    <p class="pos">Zielone tarasy</p>
-                    <p class="pos">Usługi</p>
+                <div class="list featuredlist">
+                    <div class="pos">
+                        <h3>Bulwary i promenada</h3>
+                        <div class="pos__content">
+                            <p>Kompleks usytuowany jest przy samym nabrzeżu Odry, której bulwary stanowić będą strefę odpoczynku i rekreacji. Wzdłuż promenady planowany jest szereg lokali usługowych o funkcjach gastronomicznych z ogródkami i widokiem na rzekę.</p>
+                        </div>
+                    </div>
+                    <div class="pos">
+                        <h3>Zielone tarasy</h3>
+                        <div class="pos__content">
+                            <p>Quorum zostanie wyposażone w wielopoziomowe tarasy i patio z przestrzenią do relaksu oraz miejscem spotkań. Łącznie będzie to aż 7 000 m² zielonych terenów.</p>
+                        </div>
+                    </div>
+                    <div class="pos">
+                        <h3>Usługi</h3>
+                        <div class="pos__content">
+                            <p>W parterze obiektów Quorum od strony wschodniej, północnej i zachodniej znajdą się lokale usługowe ze sklepami, usługami i gastronomią, zaspokajając potrzeby najemców i mieszkańców kompleksu.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -224,45 +240,45 @@ get_header(); ?>
                     <thead>
                         <tr>
                             <th width="10%">Budynek</th>
-                            <th width="10%">Powierzchnia</th>
-                            <th width="10%">Wynajem biura</th>
-                            <th width="10%">Koszt operacyjny</th>
-                            <th width="10%">Miejsce parkingowe</th>
-                            <th width="10%">Plan piętra</th>
+                            <th width="10%">Powierzchnia GLA</th>
+                            <th width="10%">Liczba pięter</th>
+                            <th width="10%">Miejsca parkingowe</th>
+                            <th width="10%">Dostępność</th>
+                            <th width="10%">Floor plan</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><b>Quorum A</b></td>
-                            <td>100 m<sup>2</sup></td>
-                            <td>2500 zł</td>
-                            <td>2500 zł</td>
-                            <td>100</td>
-                            <td><a href="#">Zobacz plan</a></td>
+                            <td>17800</td>
+                            <td>12</td>
+                            <td>339</td>
+                            <td>Q2 2023</td>
+                            <td><a href="#">Zobacz</a></td>
                         </tr>
                         <tr>
                             <td><b>Quorum B</b></td>
-                            <td>100 m<sup>2</sup></td>
-                            <td>2500 zł</td>
-                            <td>2500 zł</td>
-                            <td>100</td>
-                            <td><a href="#">Zobacz plan</a></td>
+                            <td>51915</td>
+                            <td>33</td>
+                            <td>582</td>
+                            <td>Q4 2024</td>
+                            <td><a href="#">Zobacz</a></td>
                         </tr>
                         <tr>
                             <td><b>Quorum D</b></td>
-                            <td>100 m<sup>2</sup></td>
-                            <td>2500 zł</td>
-                            <td>2500 zł</td>
-                            <td>100</td>
-                            <td><a href="#">Zobacz plan</a></td>
+                            <td>16230</td>
+                            <td>6</td>
+                            <td>229</td>
+                            <td>OD ZARAZ</td>
+                            <td><a href="#">Zobacz</a></td>
                         </tr>
                         <tr>
                             <td><b>Quorum E</b></td>
-                            <td>100 m<sup>2</sup></td>
-                            <td>2500 zł</td>
-                            <td>2500 zł</td>
-                            <td>100</td>
-                            <td><a href="#">Zobacz plan</a></td>
+                            <td>4853</td>
+                            <td>5</td>
+                            <td>70</td>
+                            <td>Q4 2025</td>
+                            <td><a href="#">Zobacz</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -309,10 +325,10 @@ get_header(); ?>
             </div>
         </div>
     </section>
-    <section class="homeForm">
+    <section class="homeForm homeForm--map">
         <div class="homeForm__wrap">
             <form class="visitForm">
-            <div class="visitForm__heading">
+                <div class="visitForm__heading">
                     <p class="lead">Quorum Apartments</p>
                     <h2>Umów wizytę</h2>
                 </div>
@@ -349,9 +365,42 @@ get_header(); ?>
                 </div>
             </form>
         </div>
+        <div class="homeForm__divider"></div>
     </section>
-    
-    <div class="divider"></div>
+
+    <?php
+    $args = array(
+        'posts_per_page'	=> 3,
+        'post_type'		    => 'news',
+    );
+    $query = new WP_Query($args);
+    if( $query->have_posts() ): ?>
+    <section class="homeNews">
+        <div class="homeNews__wrap container">
+            <div class="homeNews__heading">
+                <p class="lead">News</p>
+                <h2>Aktualności Quorum</h2>
+            </div>
+            <div class="homeNews__list">
+                <?php while( $query->have_posts() ) : $query->the_post(); ?>
+                <a href="<?php echo get_field('article_url'); ?>" class="article">
+                    <div class="article__thumb">
+                        <img src="<?php echo get_field('article_thumb')['url']; ?>" alt="<?php echo get_field('article_thumb')['alt']; ?>" />
+                    </div>
+                    <div class="article__content">
+                        <p class="type"><?php echo get_field('article_type')['label']; ?></p>
+                        <h3><?php echo get_the_title(); ?></h3>
+                    </div>
+                </a>
+                <?php endwhile; ?>
+            </div>
+            <div class="homeNews__cta">
+                <a href="#" class="btn"><span>Więcej</span></a>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
+    <?php wp_reset_query(); ?>
 
 </main>
 

@@ -5,7 +5,7 @@
  * Contains the closing of the #content div and all content after.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
+ * 
  * @package Quorum
  */
 
@@ -24,11 +24,11 @@
 					</div>
 					<div class="contact__row">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>" />
-						<p><a href="tel:+48661990995">+48 661 990 995</a></p>
+						<p>Mieszkania: <a href="tel:+48530052270">+48 530 052 270</a> lub <a href="tel:+48530075031">+48 530 075 031</a></p>
 					</div>
 					<div class="contact__row">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>" />
-						<p><a href="tel:+48530052270">+48 530 052 270</a> lub <a href="tel:+48530075031">+48 530 075 031</a></p>
+						<p>Biura: <a href="tel:+48661990995">+48 661 990 995</a></p>
 					</div>
 				</div>
 			</div>
@@ -41,10 +41,11 @@
 				</ul>
 			</div>
 			<div class="siteFooter__menu">
-				<h3>Oferta</h3>
+				<h3>Zobacz</h3>
 				<ul>
 					<li><a href="#">Apartamenty</a></li>
 					<li><a href="#">Biura</a></li>
+					<li><a href="#">Galeria</a></li>
 				</ul>
 			</div>
 			<div class="siteFooter__social">

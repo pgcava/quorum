@@ -9,11 +9,18 @@
  */
 @use 'partials/siteHeader';
 @use 'partials/siteFooter';
+@use 'partials/article';
+@use 'partials/subpageheader';
 
 /**
  *	Subpages
  */ 
 @use 'subpages/home';
+@use 'subpages/news';
+@use 'subpages/apartments';
+@use 'subpages/offices';
+@use 'subpages/gallery';
+@use 'subpages/about';
 
 #wpadminbar{
 	position: fixed;

@@ -4,6 +4,7 @@
     position: absolute;
     top: 0;
     padding-top: 50px;
+    z-index: 5;
 
     &__wrap{
         display: flex;
@@ -95,7 +96,7 @@
         }
     }
 }
-@media (max-width: 767px){
+@media (max-width: 991px){
     .siteHeader{
         padding-top: 10px;
 
