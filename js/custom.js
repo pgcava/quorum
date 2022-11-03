@@ -22,7 +22,6 @@
     $(document).ready(function(){
         $('.featuredlist .pos').on('click', function(){
             if($(this).find('.pos__content').hasClass('active')){
-                // $('.content[data="maincontent"]').slideDown();
                 $(this).find('.pos__content').removeClass('active').slideUp();  
             }else{
                 $('.featuredlist').find('.pos__content').removeClass('active').slideUp();
