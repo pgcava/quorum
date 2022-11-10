@@ -105,7 +105,7 @@ get_header(); ?>
                             <p><b><?php echo $floor; ?></b> piętro</p>
                         </div>
                         <div class="pos">
-                            <p><b><?php echo $meters; ?></b> m2</p>
+                            <p><b><?php echo $meters; ?></b> m²</p>
                         </div>
                     </div>
                     <div class="apartment__image">
@@ -192,10 +192,6 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="visitForm__row visitForm__row--half">
-                    <input type="text" placeholder="DD.MM.RRRR" name="visitDate" />
-                    <input type="text" placeholder="GG.MM" name="visitHour" />
-                </div>
                 <div class="visitForm__submit">
                     <button type="submit"><span>Umów spotkanie</span></button>
                 </div>
@@ -218,12 +214,19 @@ get_header(); ?>
             </div>
             <div class="homeOverview__content">
                 <div class="heading">
-                    <p class="lead">Quorum centrum biznesowe</p>
-                    <h2>Nowoczesne biura nad odrą</h2>
+                    <p class="lead"><?php echo get_field('officesOverview_lead'); ?></p>
+                    <h2><?php echo get_field('officesOverview_title'); ?></h2>
                 </div>
                 <div class="content">
-                    <p>W skład Quorum wchodzą m. in. cztery budynki biurowe, które dostarczą na wrocławski rynek ponad 90 tys m2 GLA. Dzięki zastosowanym energooszczędnym i ekologicznym rozwiązaniom kompleks spełniać będzie wymogi certyfikacji BREEAM na poziomie Excellent (taką notę otrzymał oddany już do użytku budynek Quorum D).</p>
-                    <p>Dominantą kompleksu będzie wieża biurowa o wysokości 140 metrów, która będzie drugim co do wysokości budynkiem w stoicy Dolnego Śląska.</p>
+                    <?php echo get_field('officesOverview_content'); ?>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="homeOverview__video">
+            <div class="videoWrap">
+                <div class="video">
+                    <?php echo get_field('officesOverview_video'); ?>
                 </div>
             </div>
         </div>
@@ -355,10 +358,6 @@ get_header(); ?>
                             <label>Biura</label>
                         </div>
                     </div>
-                </div>
-                <div class="visitForm__row visitForm__row--half">
-                    <input type="text" placeholder="DD.MM.RRRR" name="visitDate" />
-                    <input type="text" placeholder="GG.MM" name="visitHour" />
                 </div>
                 <div class="visitForm__submit">
                     <button type="submit"><span>Umów spotkanie</span></button>

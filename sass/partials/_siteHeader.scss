@@ -40,6 +40,15 @@
                 &:last-of-type{
                     margin-right: 0;
                 }
+                &.current-menu-item{
+                    a{
+                        &:after{
+                            left: 0;
+                            right: auto;
+                            width: 100%;
+                        }
+                    }
+                }
                 
                 a{
                     font-size: 18px;
