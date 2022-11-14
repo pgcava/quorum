@@ -61,6 +61,75 @@ get_header(); ?>
     </section>
     <?php endif; ?>
     
+    <section class="homeOverview homeOverview--about">
+        <div class="homeOverview__wrap container">
+            <div class="homeOverview__images">
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/about/about_image_02.jpg'; ?>" />
+                </div>
+            </div>
+            <div class="homeOverview__content">
+                <div class="heading">
+                    <p class="lead">Model biznesowy</p>
+                    <h2>Szerokie kompetencje wewnątrz Grupy</h2>
+                </div>
+                <div class="content">
+                    <p>Cavatina Holding stworzyła unikatowy model biznesowy, który opiera się na konsekwentnym budowaniu rozległych kompetencji wewnątrz Grupy. Cavatina Holding samodzielnie zarządza wszystkimi kluczowymi etapami procesu inwestycyjnego, od analizy i zakupu gruntów, przez projektowanie, generalne wykonawstwo i zarządzanie budżetem projektu, aż po komercjalizację obiektu, wykończenie, aranżację wnętrz i zarządzanie budynkiem w fazie operacyjnej. Skupienie wszystkich kluczowych kompetencji pozwala obok elastyczności względem Klienta, ograniczać ryzyka i zachowywać marże wewnątrz organizacji na każdym etapie realizacji, co przekłada się na wysokie łączne marże osiągane na prowadzonych projektach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="aboutImages">
+        <div class="aboutImages__wrap">
+            <div class="aboutImages__image">
+                <img src="<?php echo get_template_directory_uri() . '/images/about/about_image_full_01.jpg'; ?>" />
+            </div>
+            <div class="aboutImages__image aboutImages__image--fixed">
+                <img src="<?php echo get_template_directory_uri() . '/images/about/about_image_full_02.jpg'; ?>" />
+            </div>
+        </div>
+    </section>
+
+    <section class="homeOverview homeOverview--reverse">
+        <div class="homeOverview__wrap container">
+            <div class="homeOverview__images">
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/about/about_projects.jpg'; ?>" />
+                </div>
+            </div>
+            <div class="homeOverview__content">
+                <div class="heading">
+                    <p class="lead">Cavatina i Resi Capital</p>
+                    <h2>Nasze projekty</h2>
+                </div>
+                <div class="content">
+                    <p>Realizowane przez Grupę Cavatina Holding projekty wyróżniają się unikalną architekturą, nagradzaną w polskich i międzynarodowych konkursach oraz wysoką jakością wykończenia. Cavatina Holding kładzie również nacisk na zrównoważone budownictwo, co znajduje potwierdzenie w otrzymanych certyfikatach BREEAM i WELL HSR. Grupa przywiązuje dużą wagę do miastotwórczej roli swoich projektów, dbając o ich naturalne wpasowanie w istniejącą tkankę miejską i zaspokojenie potrzeb lokalnej społeczności.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="aboutProjects">
+        <div class="aboutProjects__wrap container">
+            <div class="aboutProjects__list">
+                <h3>Cavatina</h3>
+                <ul>
+                    <?php while(have_rows('cavatina_projects')): the_row(); ?>
+                    <li><p class="city"><?php echo get_sub_field('cavatina_projects_city'); ?></p><p><?php echo get_sub_field('cavatina_projects_name'); ?></p></li>
+                    <?php endwhile; ?>
+                </ul>
+            </div>
+            <div class="aboutProjects__list">
+                <h3>Resi Capital</h3>
+                <ul>
+                <?php while(have_rows('resi_projects')): the_row(); ?>
+                    <li><p class="city"><?php echo get_sub_field('resi_projects_city'); ?></p><p><?php echo get_sub_field('resi_projects_name'); ?></p></li>
+                    <?php endwhile; ?>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>

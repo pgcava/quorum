@@ -400,6 +400,11 @@
             }
         }
     }
+    &--reverse{
+        .homeOverview__wrap{
+            flex-direction: row-reverse;
+        }
+    }
 }
 @media(max-width: 1629px){
     .homeOverview{
@@ -655,6 +660,27 @@
                     max-width: calc(100% - 40px);
                     background-color: unset;
 
+                    img{
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        &--about{
+            .homeOverview__images{
+                .image{
+                    img{
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        &--reverse{
+            .homeOverview__wrap{
+                flex-direction: column-reverse;
+            }
+            .homeOverview__images{
+                .image{
                     img{
                         object-fit: cover;
                     }

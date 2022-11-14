@@ -37,8 +37,8 @@ get_header(); ?>
                     <p>Poza 341 mieszkaniami od Resi Capital znajdą się tu między innymi przestrzenie usługowe i biurowe, uzupełnione strefami zieleni i relaksu, tak, aby jak najlepiej odpowiedzieć na potrzeby rozwijającego się miasta i jego mieszkańców. Dowiedz się więcej:</p>
                 </div>
                 <div class="actions">
-                    <a href="#"><span>Mieszkania</span></a>
-                    <a href="#"><span>Biura</span></a>
+                    <a href="<?php echo get_home_url('/mieszkania'); ?>"><span>Mieszkania</span></a>
+                    <a href="<?php echo get_home_url('/biura'); ?>"><span>Biura</span></a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,119 @@
+@use '../global/variables' as v;
+
+.aboutImages{
+    padding-bottom: 10%;
+
+    &__wrap{
+        position: relative;
+    }
+    &__image{
+        display: flex;
+        width: 60%;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        &--fixed{
+            width: 45%;
+            position: absolute;
+            bottom: -15%;
+            right: 10%;
+            box-shadow: 24px 24px 0 0 v.$gold;
+        }
+    }
+}
+@media (max-width: 991px){
+    .aboutImages{
+        &__image{
+            &--fixed{
+                width: 50%;
+                right: 5%;
+                box-shadow: 15px 15px 0 0 v.$gold;
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .aboutImages{
+        &__image{
+            width: 100%;
+
+            &--fixed{
+                width: 90%;
+                right: -4%;
+                position: relative;
+                box-shadow: 10px 10px 0 0 v.$gold;
+                margin-top: -120px;
+            }
+        }
+    }
+}
+
+
+.aboutProjects{
+    &__list{
+        margin: 0 0 100px;
+
+        h3{
+            font-size: 21px;
+            line-height: 1.3;
+            font-weight: 100;
+            margin: 0 0 30px;
+            color: #000;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li{
+                display: flex;
+                align-items: center;
+                margin: 0 0 15px;
+
+                p{
+                    font-size: 18px;
+                    line-height: 1.3;
+                    font-weight: 100;
+                    letter-spacing: 2px;
+                    margin: 0;
+                    color: #7e7e7e;
+
+                    &.city{
+                        min-width: 250px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .aboutProjects{
+        &__list{
+            margin: 0 0 65px;
+
+            h3{
+                font-size: 18px;
+                margin: 0 0 20px;
+            }
+            ul{
+                li{
+                    margin: 0 0 15px;
+
+                    p{
+                        font-size: 16px;
+
+                        &.city{
+                            min-width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
