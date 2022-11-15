@@ -38,6 +38,15 @@
 	box-sizing: border-box;
 }
 
+::selection {
+	background: v.$gold;
+	color: #fff;
+}
+::-moz-selection {
+	background: v.$gold;
+	color: #fff;
+}
+
 body{
 	font-family: 'montserrat', sans-serif;
 	box-sizing: border-box;

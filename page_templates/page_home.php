@@ -394,7 +394,7 @@ get_header(); ?>
                 <?php endwhile; ?>
             </div>
             <div class="homeNews__cta">
-                <a href="#" class="btn"><span>Więcej</span></a>
+                <a href="<?php echo home_url('/news'); ?>" class="btn"><span>Więcej</span></a>
             </div>
         </div>
     </section>

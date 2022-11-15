@@ -25,7 +25,7 @@ get_header(); ?>
                     <?php echo get_field('apOverview_content'); ?>
                 </div>
                 <div class="cta">
-                    <a href="#" class="btn"><span>Dowiedz się więcej</span></a>
+                    <a href="https://cavatina.pl/" class="btn"><span>Dowiedz się więcej</span></a>
                 </div>
             </div>
             <div class="apOverview__images">

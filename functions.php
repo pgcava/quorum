@@ -21,29 +21,29 @@ if ( ! defined( '_S_VERSION' ) ) {
  */
 function quroum_setup() {
 	/*
-		* Make theme available for translation.
-		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on Quorum, use a find and replace
-		* to change 'quroum' to the name of your theme in all the template files.
-		*/
+	 * Make theme available for translation.
+	 * Translations can be filed in the /languages/ directory.
+	 * If you're building a theme based on Quorum, use a find and replace
+	 * to change 'quroum' to the name of your theme in all the template files.
+	 */
 	load_theme_textdomain( 'quroum', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
 	/*
-		* Let WordPress manage the document title.
-		* By adding theme support, we declare that this theme does not use a
-		* hard-coded <title> tag in the document head, and expect WordPress to
-		* provide it for us.
-		*/
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
 	add_theme_support( 'title-tag' );
 
 	/*
-		* Enable support for Post Thumbnails on posts and pages.
-		*
-		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
+	 * Enable support for Post Thumbnails on posts and pages.
+	 *
+	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 */
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
@@ -54,9 +54,9 @@ function quroum_setup() {
 	);
 
 	/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
-		*/
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
 	add_theme_support(
 		'html5',
 		array(
@@ -154,6 +154,11 @@ function quroum_scripts() {
 	// jQuery
 	wp_register_script( 'quorum-jquery', get_template_directory_uri() . '/plugins/jQuery/jquery-3.6.0.min.js', null, null, true);
 	wp_enqueue_script( 'quorum-jquery' );
+
+	// Lightbox2
+	wp_enqueue_style( 'lightbox2-style', get_template_directory_uri() . '/plugins/lightbox2/css/lightbox.min.css', false);
+	wp_register_script( 'lightbox2-script', get_template_directory_uri() . '/plugins/lightbox2/js/lightbox.min.js', null, null, true );
+	wp_enqueue_script('lightbox2-script');
 
 	// Slick
 	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/plugins/slick/slick.css', false);
