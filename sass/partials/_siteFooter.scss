@@ -108,6 +108,9 @@
             margin: 0 0 15px;
 
             a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 width: 32px;
                 height: 32px;
                 background-color: #333;
@@ -120,6 +123,17 @@
 
                 &:last-of-type{
                     margin-right: 0;
+                }
+
+                &.facebook{
+                    img{
+                        width: 30px;
+                    }
+                }
+
+                img{
+                    width: 100%;
+                    filter: contrast(0.6);
                 }
             }
         }
@@ -185,6 +199,12 @@
                     width: 28px;
                     height: 28px;
                     margin-right: 6px;
+
+                    &.facebook{
+                        img{
+                            width: 24px;
+                        }
+                    }
                 }
             }
             p{

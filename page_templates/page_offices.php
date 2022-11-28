@@ -42,11 +42,22 @@ get_header(); ?>
             <div class="apOverview__images">
                 <div class="image">
                     <img src="<?php echo get_template_directory_uri() . '/images/offices/offices.jpg'; ?>" />
+                    <?php if(get_field('apOverview_video')): ?>
                     <div class="image__play">
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/play_btn.svg'; ?>" />
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
+            <?php if(get_field('apOverview_video')): ?>
+            <div class="apOverview__video">
+                <div class="videoWrap">
+                    <div class="video">
+                        <?php echo get_field('apOverview_video'); ?>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
         </div>
     </section>
 
@@ -229,6 +240,10 @@ get_header(); ?>
                 </div>
                 <div class="visitForm__submit">
                     <button type="submit"><span>Umów spotkanie</span></button>
+                </div>
+                <div class="visitForm__acceptance">
+                    <p>Wyrażam zgodę na przetwarzanie moich danych osobowych przekazanych za pośrednictwem formularza kontaktowego na zasadach określonych w <a href="https://cavatina.pl/rodo/gw/klauzula.pdf">polityce prywatności</a>.</p>
+                    <p>Wyrażam zgodę na prowadzenie marketingu bezpośredniego oraz przesyłanie mi informacji marketingowych i ofert handlowych na podany w formularzu adres mailowy.</p>
                 </div>
             </form>
         </div>

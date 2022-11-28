@@ -203,3 +203,17 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Sierotki ACF
+ */
+function acf_orphans($value, $post_id, $field) {
+	if ( class_exists( 'iworks_orphan' ) ) {
+		$orphan = new \iworks_orphan();
+		$value = $orphan->replace( $value );
+	}
+	return $value;
+}
+add_filter('acf/format_value/type=textarea', 'acf_orphans', 10, 3);
+add_filter('acf/format_value/type=wysiwyg', 'acf_orphans', 10, 3);
+add_filter('acf/format_value', 'acf_orphans', 10, 3);

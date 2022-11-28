@@ -46,6 +46,14 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
+            <div class="apOverview__video">
+                <div class="videoWrap">
+                    <?php
+                        $src = get_template_directory_uri() . '/images/homepage/video/quorum_heading_video_v2.mp4';
+                        echo do_shortcode('[videojs_video url="' . $src . '"]')
+                    ?>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -208,6 +216,10 @@ get_header(); ?>
                 </div>
                 <div class="visitForm__submit">
                     <button type="submit"><span>Umów spotkanie</span></button>
+                </div>
+                <div class="visitForm__acceptance">
+                    <p>Wyrażam zgodę na przetwarzanie moich danych osobowych przekazanych za pośrednictwem formularza kontaktowego na zasadach określonych w <a href="https://cavatina.pl/rodo/gw/klauzula.pdf">polityce prywatności</a>.</p>
+                    <p>Wyrażam zgodę na prowadzenie marketingu bezpośredniego oraz przesyłanie mi informacji marketingowych i ofert handlowych na podany w formularzu adres mailowy.</p>
                 </div>
             </form>
         </div>

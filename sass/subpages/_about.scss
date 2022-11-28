@@ -76,7 +76,8 @@
                 align-items: center;
                 margin: 0 0 15px;
 
-                p{
+                p,
+                a{
                     font-size: 18px;
                     line-height: 1.3;
                     font-weight: 100;
@@ -86,6 +87,15 @@
 
                     &.city{
                         min-width: 250px;
+                    }
+                }
+
+                a{
+                    transition: ease .3s;
+
+                    &:hover{
+                        text-decoration: underline;
+                        opacity: .75;
                     }
                 }
             }
@@ -105,7 +115,8 @@
                 li{
                     margin: 0 0 15px;
 
-                    p{
+                    p,
+                    a{
                         font-size: 16px;
 
                         &.city{

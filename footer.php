@@ -51,10 +51,15 @@
 			<div class="siteFooter__social">
 				<h3>Kontakt</h3>
 				<div class="social">
-					<a href="#"></a>
-					<a href="#"></a>
-					<a href="#"></a>
-					<a href="#"></a>
+					<a href="https://www.facebook.com/ResiCapital" class="facebook">
+						<img src="<?php echo get_template_directory_uri() . '/images/icons/social/fb_ico.svg'; ?>" />
+					</a>
+					<a href="https://www.instagram.com/resi.capital/">
+						<img src="<?php echo get_template_directory_uri() . '/images/icons/social/ig_ico.svg'; ?>" />
+					</a>
+					<a href="https://www.linkedin.com/company/resi-capital/">
+						<img src="<?php echo get_template_directory_uri() . '/images/icons/social/in_ico.svg'; ?>" />
+					</a>
 				</div>
 			</div>
 		</div>

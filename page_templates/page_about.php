@@ -25,17 +25,28 @@ get_header(); ?>
                     <?php echo get_field('apOverview_content'); ?>
                 </div>
                 <div class="cta">
-                    <a href="https://cavatina.pl/" class="btn"><span>Dowiedz się więcej</span></a>
+                    <a href="https://resicapital.pl/" class="btn"><span>Dowiedz się więcej</span></a>
                 </div>
             </div>
             <div class="apOverview__images">
                 <div class="image">
                     <img src="<?php echo get_template_directory_uri() . '/images/about/about_image.jpg'; ?>" />
+                    <?php if(get_field('apOverview_video')): ?>
                     <div class="image__play">
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/play_btn.svg'; ?>" />
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
+            <?php if(get_field('apOverview_video')): ?>
+            <div class="apOverview__video">
+                <div class="videoWrap">
+                    <div class="video">
+                        <?php echo get_field('apOverview_video'); ?>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
         </div>
     </section>
 
@@ -116,7 +127,7 @@ get_header(); ?>
                 <h3>Cavatina</h3>
                 <ul>
                     <?php while(have_rows('cavatina_projects')): the_row(); ?>
-                    <li><p class="city"><?php echo get_sub_field('cavatina_projects_city'); ?></p><p><?php echo get_sub_field('cavatina_projects_name'); ?></p></li>
+                    <li><p class="city"><?php echo get_sub_field('cavatina_projects_city'); ?></p><a href="<?php echo get_sub_field('cavatina_projects_url') ?>" target="_blank"><?php echo get_sub_field('cavatina_projects_name'); ?></a></li>
                     <?php endwhile; ?>
                 </ul>
             </div>
@@ -124,7 +135,7 @@ get_header(); ?>
                 <h3>Resi Capital</h3>
                 <ul>
                 <?php while(have_rows('resi_projects')): the_row(); ?>
-                    <li><p class="city"><?php echo get_sub_field('resi_projects_city'); ?></p><p><?php echo get_sub_field('resi_projects_name'); ?></p></li>
+                    <li><p class="city"><?php echo get_sub_field('resi_projects_city'); ?></p><a href="<?php echo get_sub_field('resi_projects_url') ?>" target="_blank"><?php echo get_sub_field('resi_projects_name'); ?></a></li>
                     <?php endwhile; ?>
                 </ul>
             </div>
