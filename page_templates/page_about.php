@@ -71,6 +71,42 @@ get_header(); ?>
         </div>
     </section>
     <?php endif; ?>
+
+    <section class="apOverview apOverview--about">
+        <div class="apOverview__wrap container">
+            <div class="apOverview__content">
+                <div class="heading">
+                    <p class="lead"><?php echo get_field('apOverview_resi_lead'); ?></p>
+                    <h2><?php echo get_field('apOverview_resi_title'); ?></h2>
+                </div>
+                <div class="content">
+                    <?php echo get_field('apOverview_resi_content'); ?>
+                </div>
+                <div class="cta">
+                    <a href="https://resicapital.pl/" class="btn"><span>Dowiedz się więcej</span></a>
+                </div>
+            </div>
+            <div class="apOverview__images">
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/apartments/apartment_02.webp'; ?>" />
+                    <?php if(get_field('apOverview_resi_video')): ?>
+                    <div class="image__play">
+                        <img src="<?php echo get_template_directory_uri() . '/images/icons/play_btn.svg'; ?>" />
+                    </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <?php if(get_field('apOverview_resi_video')): ?>
+            <div class="apOverview__video">
+                <div class="videoWrap">
+                    <div class="video">
+                        <?php echo get_field('apOverview_video'); ?>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+        </div>
+    </section>
     
     <section class="homeOverview homeOverview--about">
         <div class="homeOverview__wrap container">
@@ -97,7 +133,7 @@ get_header(); ?>
                 <img src="<?php echo get_template_directory_uri() . '/images/about/about_image_full_01.jpg'; ?>" />
             </div>
             <div class="aboutImages__image aboutImages__image--fixed">
-                <img src="<?php echo get_template_directory_uri() . '/images/about/about_image_full_02.jpg'; ?>" />
+                <img src="<?php echo get_template_directory_uri() . '/images/about/about_image_full_02.webp'; ?>" />
             </div>
         </div>
     </section>

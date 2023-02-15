@@ -1,0 +1,45 @@
+@use '../global/variables' as v;
+
+.subpageHeading{
+    margin: 40px 0 25px;
+
+    &__wrap{
+        @media (min-width: 1630px){
+            max-width: 1140px;
+        }
+
+        h1{
+            font-size: 50px;
+            line-height: 60px;
+            margin: 0;
+            color: v.$navy;
+        }
+    }
+}
+@media (max-width: 767px){
+    .subpageHeading{
+        margin: 25px 0 15px;
+
+        &__wrap{
+            h1{
+                font-size: 32px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+.subpageContent{
+    padding: 0 0 50px;
+    border-bottom: 1px solid #dfdfdf;
+
+    &__wrap{
+        @media (min-width: 1630px){
+            max-width: 1140px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .subpageContent{
+        padding: 0 0 25px;
+    }
+}

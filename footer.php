@@ -10,7 +10,9 @@
  */
 
 ?>
-
+	<div id="scrollTop" class="scrollTop">
+		<img src="<?php echo get_template_directory_uri() . '/images/icons/slider_arrow_left.svg'; ?>" />
+	</div>
 	<footer id="colophon" class="siteFooter">
 		<div class="siteFooter__wrap container">
 			<div class="siteFooter__info">
@@ -20,32 +22,36 @@
 				<div class="contact">
 					<div class="contact__row">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/marker_ico.svg'; ?>" />
-						<p><a href="#">Gen. Władysława Sikorskiego, 53-659 Wrocław</a></p>
+						<p>Inwestycja - <a href="https://goo.gl/maps/CY1kmm1qRN3UE1Qf8" target="_blank">Gen. Władysława Sikorskiego 13, 53-659 Wrocław</a></p>
+					</div>
+					<div class="contact__row">
+						<img src="<?php echo get_template_directory_uri() . '/images/icons/marker_ico.svg'; ?>" />
+						<p>Biuro sprzedaży - <a href="https://goo.gl/maps/nDzPnLGHDnJaDa4u7" target="_blank">Fabryczna 6, 53-609 Wrocław</a></p>
 					</div>
 					<div class="contact__row">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>" />
-						<p>Mieszkania: <a href="tel:+48530052270">+48 530 052 270</a> lub <a href="tel:+48530075031">+48 530 075 031</a></p>
+						<p>Mieszkania: <a href="tel:+48530052270">+48 530 052 270</a> lub <a href="tel:+48530044913">+48 530 044 913</a></p>
 					</div>
 					<div class="contact__row">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>" />
-						<p>Biura: <a href="tel:+48661990995">+48 661 990 995</a></p>
+						<p>Biura: <a href="tel:+48661990995">+48 661 990 995</a> lub <a href="tel:+48537098334">+48 537 098 334</a></p>
 					</div>
 				</div>
 			</div>
 			<div class="siteFooter__menu">
 				<h3>O nas</h3>
 				<ul>
-					<li><a href="#">Quorum</a></li>
-					<li><a href="#">Zespół</a></li>
-					<li><a href="#">Polityka Prywatności</a></li>
+					<li><a href="<?php echo home_url(); ?>">Quorum</a></li>
+					<li><a href="<?php echo home_url() . '#team'; ?>">Zespół</a></li>
+					<li><a href="https://cavatina.pl/rodo/gw/klauzula.pdf">Polityka Prywatności</a></li>
 				</ul>
 			</div>
 			<div class="siteFooter__menu">
 				<h3>Zobacz</h3>
 				<ul>
-					<li><a href="#">Apartamenty</a></li>
-					<li><a href="#">Biura</a></li>
-					<li><a href="#">Galeria</a></li>
+					<li><a href="<?php echo home_url() . '/mieszkania'; ?>">Apartamenty</a></li>
+					<li><a href="<?php echo home_url() . '/biura'; ?>">Biura</a></li>
+					<li><a href="<?php echo home_url() . '/galeria'; ?>">Galeria</a></li>
 				</ul>
 			</div>
 			<div class="siteFooter__social">

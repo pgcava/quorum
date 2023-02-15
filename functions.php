@@ -217,3 +217,31 @@ function acf_orphans($value, $post_id, $field) {
 add_filter('acf/format_value/type=textarea', 'acf_orphans', 10, 3);
 add_filter('acf/format_value/type=wysiwyg', 'acf_orphans', 10, 3);
 add_filter('acf/format_value', 'acf_orphans', 10, 3);
+
+
+add_action('wp_ajax_send_contact_form', 'send_contact_form');
+add_action('wp_ajax_nopriv_send_contact_form', 'send_contact_form');
+function send_contact_form(){
+	$name = isset( $_POST['name'] ) ? $_POST['name'] : '';
+	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
+	$phone = isset( $_POST['phone'] ) ? $_POST['phone'] : '';
+	$type = isset( $_POST['type'] ) ? $_POST['type'] : '';
+
+	if($type == 'residences'){
+		$type_name = 'Mieszkaniem';
+	}else{
+		$type_name = 'Biurem';
+	}
+
+	$to = 'kontakt@resicapital.pl';
+	$subject = '[quorumapartments.pl] Prośba o kontakt';
+	$message = "Data zgłoszenia: " . date('d/m/Y H:i:s', time()) . "<br/>Imię i nazwisko: " . $name . "<br/>Adres e-mail: " . $mail . "<br/>Telefon: " . $phone . "<br/>Jest zainteresowany: " . $type_name;
+	$headers = array('Content-Type: text/html; charset=UTF-8', 'Reply-To: ' . $name . ' <' . $mail . '>');
+	
+	$sent = false;
+	$sent = wp_mail($to, $subject, $message, $headers);
+
+	echo $sent;
+
+	die();
+}

@@ -53,8 +53,15 @@
 
 
 .aboutProjects{
+    &__wrap{
+        display: flex;
+    }
     &__list{
         margin: 0 0 100px;
+
+        &:first-of-type{
+            margin-right: 50px;
+        }
 
         h3{
             font-size: 21px;
@@ -98,6 +105,36 @@
                         opacity: .75;
                     }
                 }
+            }
+        }
+    }
+}
+@media (max-width: 1299px){
+    .aboutProjects{
+        &__list{
+            &:first-of-type{
+                margin-right: 30px;
+            }
+            ul{
+                li{
+                    p{
+                        &.city{
+                            min-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .aboutProjects{
+        &__wrap{
+            display: block;
+        }
+        &__list{
+            &:first-of-type{
+                margin-right: 0;
             }
         }
     }

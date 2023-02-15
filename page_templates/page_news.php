@@ -25,7 +25,7 @@ get_header(); ?>
     <section class="newsList">
         <div class="newsList__wrap container">
             <?php while( $query->have_posts() ) : $query->the_post(); ?>
-            <a href="<?php echo get_field('article_url'); ?>" class="article">
+            <a href="<?php echo get_permalink(); ?>" class="article">
                 <div class="article__thumb">
                     <img src="<?php echo get_field('article_thumb')['url']; ?>" alt="<?php echo get_field('article_thumb')['alt']; ?>" />
                 </div>

@@ -267,3 +267,41 @@
         }
     }
 }
+
+/**
+ *  Scroll to top
+ */
+.scrollTop{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 80px;
+    height: 80px;
+    z-index: 90;
+    cursor: pointer;
+    opacity: 0;
+    transition: ease .3s;
+
+    &.visible{
+        opacity: 1;
+
+        &:hover{
+            opacity: .7;
+        }
+    }
+
+    img{
+        width: inherit;
+        height: inherit;
+        transform: rotate(90deg);
+        filter: sepia(100%) hue-rotate(5deg) brightness(130%) contrast(105%);
+    }
+}
+@media (max-width: 767px){
+    .scrollTop{
+        width: 50px;
+        height: 50px;
+        right: 10px;
+        bottom: 10px;
+    }
+}

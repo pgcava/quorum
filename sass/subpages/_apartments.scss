@@ -813,6 +813,13 @@
                 }
                 &__image{
                     max-width: 500px;
+
+                    img{
+                        width: auto;
+                        height: auto;
+                        object-fit: unset;
+                        max-width: 400px;
+                    }
                 }
             }
         }

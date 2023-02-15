@@ -1,0 +1,15 @@
+.singleArticle{
+    .subpageHeader{
+        min-height: auto;
+        height: 160px;
+    }
+
+    &__content{
+        max-width: 900px;
+        padding: 50px 0;
+
+        h1{
+            margin: 0 0 24px;
+        }
+    }
+}

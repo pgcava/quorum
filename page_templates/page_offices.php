@@ -26,15 +26,15 @@ get_header(); ?>
                 </div>
                 <div class="info">
                     <div class="info__pos">
-                        <h3>90 795</h3>
+                        <h3>86 000</h3>
                         <p>M² powierzchni GLA</p>
                     </div>
                     <div class="info__pos">
-                        <h3>80 000</h3>
+                        <h3>76 758</h3>
                         <p>Dostępnej powierzchni biurowej</p>
                     </div>
                     <div class="info__pos">
-                        <h3>1 346</h3>
+                        <h3>1 114</h3>
                         <p>Dostępnych miejsc parkingowych</p>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ get_header(); ?>
         <div class="typesInfo__wrap container">
             <div class="typesInfo__heading">
                 <p class="lead">Szczegóły</p>
-                <h2>Rodzaje mieszkań</h2>
+                <h2>Rodzaje biur</h2>
             </div>
             <div class="typesInfo__nav">
                 <?php while(have_rows('typesList')): the_row(); ?>
@@ -104,8 +104,6 @@ get_header(); ?>
                     $terrace_sq = get_sub_field('typesList_terrace_sq');
                     $floors = get_sub_field('typesList_floors');
                     $parking = get_sub_field('typesList_parking');
-                    $parking_bike = get_sub_field('typesList_parking_bike');
-                    $price = get_sub_field('typesList_price');
                     $available = get_sub_field('typesList_available');
                     $pdf = get_sub_field('typesList_pdf');
                 ?>
@@ -115,12 +113,12 @@ get_header(); ?>
                         <ul class="list">
                             <li><p class="label">Powierzchnia biurowa</p><p class="value"><?php echo $office_sq; ?> m²</p></li>
                             <li><p class="label">Powierzchnia usługowa</p><p class="value"><?php echo $services_sq; ?> m²</p></li>
-                            <li><p class="label">Powierzchnia tarasów</p><p class="value"><?php echo $services_sq; ?> m²</p></li>
+                            <?php if($terrace_sq): ?>
+                            <li><p class="label">Powierzchnia tarasów</p><p class="value"><?php echo $terrace_sq; ?> m²</p></li>
+                            <?php endif; ?>
                             <li><p class="label">Piętra </p><p class="value"><?php echo $floors; ?></p></li>
                             <li><p class="label">Miejsca parkingowe</p><p class="value"><?php echo $parking; ?></p></li>
-                            <li><p class="label">Miejsca parkingowe dla rowerów</p><p class="value"><?php echo $parking_bike; ?></p></li>
                             <li><p class="label">Dostępność</p><p class="value"><?php echo $available; ?></p></li>
-                            <li><p class="label">Czynsz biura</p><p class="value"><?php echo $price; ?> eur/m²</p></li>
                         </ul>
                         <a href="<?php echo $pdf; ?>" class="btn"><span>Pobierz PDF</span></a>
                     </div>
@@ -165,41 +163,33 @@ get_header(); ?>
                             <th width="10%">Liczba pięter</th>
                             <th width="10%">Miejsca parkingowe</th>
                             <th width="10%">Dostępność</th>
-                            <th width="10%">Floor plan</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><b>Quorum A</b></td>
                             <td>17800</td>
-                            <td>12</td>
+                            <td>11</td>
                             <td>339</td>
                             <td>Q2 2023</td>
-                            <td><a href="#">Zobacz</a></td>
                         </tr>
                         <tr>
                             <td><b>Quorum B</b></td>
                             <td>51915</td>
-                            <td>33</td>
+                            <td>35</td>
                             <td>582</td>
                             <td>Q4 2024</td>
-                            <td><a href="#">Zobacz</a></td>
                         </tr>
                         <tr>
                             <td><b>Quorum D</b></td>
                             <td>16230</td>
-                            <td>6</td>
+                            <td>5</td>
                             <td>229</td>
                             <td>OD ZARAZ</td>
-                            <td><a href="#">Zobacz</a></td>
                         </tr>
                         <tr>
                             <td><b>Quorum E</b></td>
-                            <td>4853</td>
-                            <td>5</td>
-                            <td>70</td>
-                            <td>Q4 2025</td>
-                            <td><a href="#">Zobacz</a></td>
+                            <td colspan="4">W FAZIE PROJEKTOWANIA</td>
                         </tr>
                     </tbody>
                 </table>
@@ -214,14 +204,15 @@ get_header(); ?>
                     <p class="lead">Quorum Apartments</p>
                     <h2>Umów wizytę</h2>
                 </div>
+                <div class="notices"></div>
                 <div class="visitForm__row">
-                    <input type="text" placeholder="Imię i nazwisko" name="visitName" />
+                    <input type="text" placeholder="Imię i nazwisko" name="visitName" required/>
                 </div>
                 <div class="visitForm__row">
-                    <input type="email" placeholder="Email" name="visitEmail" />
+                    <input type="email" placeholder="Email" name="visitEmail" required/>
                 </div>
                 <div class="visitForm__row">
-                    <input type="phone" placeholder="Telefon" name="visitPhone" />
+                    <input type="phone" placeholder="Telefon" name="visitPhone" required/>
                 </div>
                 <div class="visitForm__row">
                     <p>Interesują mnie:</p>

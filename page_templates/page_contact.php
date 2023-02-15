@@ -13,14 +13,15 @@ get_header(); ?>
                     <p class="lead">Quorum Apartments</p>
                     <h2>Umów wizytę</h2>
                 </div>
+                <div class="notices"></div>
                 <div class="visitForm__row">
-                    <input type="text" placeholder="Imię i nazwisko" name="visitName" />
+                    <input type="text" placeholder="Imię i nazwisko" name="visitName" required/>
                 </div>
                 <div class="visitForm__row">
-                    <input type="email" placeholder="Email" name="visitEmail" />
+                    <input type="email" placeholder="Email" name="visitEmail" required/>
                 </div>
                 <div class="visitForm__row">
-                    <input type="phone" placeholder="Telefon" name="visitPhone" />
+                    <input type="phone" placeholder="Telefon" name="visitPhone" required/>
                 </div>
                 <div class="visitForm__row">
                     <p>Interesują mnie:</p>

@@ -369,6 +369,41 @@
     margin: 0 auto;
   }
 }
+/**
+ *  Scroll to top
+ */
+.scrollTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 80px;
+  height: 80px;
+  z-index: 90;
+  cursor: pointer;
+  opacity: 0;
+  transition: ease 0.3s;
+}
+.scrollTop.visible {
+  opacity: 1;
+}
+.scrollTop.visible:hover {
+  opacity: 0.7;
+}
+.scrollTop img {
+  width: inherit;
+  height: inherit;
+  transform: rotate(90deg);
+  filter: sepia(100%) hue-rotate(5deg) brightness(130%) contrast(105%);
+}
+
+@media (max-width: 767px) {
+  .scrollTop {
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    bottom: 10px;
+  }
+}
 .article {
   width: 100%;
   max-width: 480px;
@@ -511,6 +546,9 @@
   margin: 0;
   text-align: center;
 }
+.subpageHeader--apartments {
+  background-image: url("/wp-content/themes/quorum/images/apartments/lobby6.webp");
+}
 
 @media (max-width: 1629px) {
   .subpageHeader {
@@ -580,7 +618,7 @@
   }
 }
 .homeHeader {
-  background-image: url("/wp-content/themes/quorum/images/homepage/homeHeader.webp");
+  background-image: url("/wp-content/themes/quorum/images/homepage/header_new.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -739,6 +777,14 @@
   background-color: #29284a;
   position: relative;
   z-index: 2;
+}
+.homeOverview__images .image.vector {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1098039216);
+}
+.homeOverview__images .image.vector img {
+  padding: 20px;
+  background-color: inherit;
 }
 .homeOverview__images .image:after {
   content: "";
@@ -1060,6 +1106,9 @@
     right: -10px;
     bottom: -8px;
   }
+  .homeOverview__images .image.vector img {
+    padding: 10px;
+  }
   .homeOverview__content {
     max-width: calc(55% - 20px);
   }
@@ -1108,6 +1157,12 @@
   }
   .homeOverview__images .image img {
     object-fit: contain;
+    background-color: inherit;
+  }
+  .homeOverview__images .image.vector {
+    background-color: #fff;
+  }
+  .homeOverview__images .image.vector img {
     background-color: inherit;
   }
   .homeOverview__images .image--fixed {
@@ -1904,6 +1959,11 @@
 .homeForm .visitForm {
   max-width: 640px;
   margin: 0 auto;
+  transition: ease 0.3s;
+}
+.homeForm .visitForm.loading {
+  opacity: 0.5;
+  pointer-events: none;
 }
 .homeForm .visitForm__heading {
   margin: 0 0 40px;
@@ -1925,6 +1985,31 @@
   color: #000;
   margin: 0;
   text-align: center;
+}
+.homeForm .visitForm .notices__notice {
+  padding: 8px 14px 6px;
+  border-radius: 3px;
+  border: 1px solid;
+  margin: 0 0 30px;
+}
+.homeForm .visitForm .notices__notice p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+.homeForm .visitForm .notices__notice--error {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.homeForm .visitForm .notices__notice--error p {
+  color: #721c24;
+}
+.homeForm .visitForm .notices__notice--success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+.homeForm .visitForm .notices__notice--success p {
+  color: #155724;
 }
 .homeForm .visitForm__row {
   margin: 0 0 35px;
@@ -2093,6 +2178,9 @@
 }
 .homeForm--map .homeForm__divider {
   height: 600px;
+}
+.homeForm--apartments {
+  background-image: url("/wp-content/themes/quorum/images/apartments/lobby3.webp");
 }
 
 @media (max-width: 1199px) {
@@ -2374,6 +2462,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  max-width: 980px;
+  margin: 0 auto;
 }
 .homeTeam__list .teammate {
   width: 100%;
@@ -2404,13 +2494,40 @@
   font-weight: 100;
   margin: 0;
 }
+.homeTeam__list .teammate__info .contact {
+  margin: 18px 0 0;
+}
+.homeTeam__list .teammate__info .contact__row {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px;
+  transition: ease 0.3s;
+}
+.homeTeam__list .teammate__info .contact__row:hover {
+  opacity: 0.75;
+}
+.homeTeam__list .teammate__info .contact__row img {
+  max-width: 18px;
+  margin-right: 8px;
+}
+.homeTeam__list .teammate__info .contact__row p {
+  font-size: 16px;
+  color: #000;
+  text-transform: none;
+}
 
 @media (max-width: 1629px) {
+  .homeTeam__list {
+    max-width: 700px;
+  }
   .homeTeam__list .teammate {
     max-width: 340px;
   }
 }
 @media (max-width: 1199px) {
+  .homeTeam__list {
+    max-width: 600px;
+  }
   .homeTeam__list .teammate {
     max-width: 290px;
   }
@@ -2419,6 +2536,9 @@
     margin: 0 0 8px;
   }
   .homeTeam__list .teammate__info p {
+    font-size: 14px;
+  }
+  .homeTeam__list .teammate__info .contact__row p {
     font-size: 14px;
   }
 }
@@ -2432,6 +2552,9 @@
   }
   .homeTeam__heading h2 {
     font-size: 46px;
+  }
+  .homeTeam__list {
+    max-width: 460px;
   }
   .homeTeam__list .teammate {
     max-width: 220px;
@@ -3276,6 +3399,12 @@
 .typesInfo--offices .typesInfo__list .typeSlide__image {
   max-width: 500px;
 }
+.typesInfo--offices .typesInfo__list .typeSlide__image img {
+  width: auto;
+  height: auto;
+  object-fit: unset;
+  max-width: 400px;
+}
 
 @media (max-width: 1199px) {
   .typesInfo__list .typeSlide__content {
@@ -3588,8 +3717,14 @@
     margin-top: -120px;
   }
 }
+.aboutProjects__wrap {
+  display: flex;
+}
 .aboutProjects__list {
   margin: 0 0 100px;
+}
+.aboutProjects__list:first-of-type {
+  margin-right: 50px;
 }
 .aboutProjects__list h3 {
   font-size: 21px;
@@ -3631,6 +3766,22 @@
   opacity: 0.75;
 }
 
+@media (max-width: 1299px) {
+  .aboutProjects__list:first-of-type {
+    margin-right: 30px;
+  }
+  .aboutProjects__list ul li p.city {
+    min-width: 200px;
+  }
+}
+@media (max-width: 991px) {
+  .aboutProjects__wrap {
+    display: block;
+  }
+  .aboutProjects__list:first-of-type {
+    margin-right: 0;
+  }
+}
 @media (max-width: 575px) {
   .aboutProjects__list {
     margin: 0 0 65px;
@@ -3643,11 +3794,11 @@
     margin: 0 0 15px;
   }
   .aboutProjects__list ul li p,
-.aboutProjects__list ul li a {
+  .aboutProjects__list ul li a {
     font-size: 16px;
   }
   .aboutProjects__list ul li p.city,
-.aboutProjects__list ul li a.city {
+  .aboutProjects__list ul li a.city {
     min-width: 150px;
   }
 }
@@ -3686,6 +3837,18 @@ body.page-template-page_contact .siteHeader {
     height: 80px;
   }
 }
+.singleArticle .subpageHeader {
+  min-height: auto;
+  height: 160px;
+}
+.singleArticle__content {
+  max-width: 900px;
+  padding: 50px 0;
+}
+.singleArticle__content h1 {
+  margin: 0 0 24px;
+}
+
 /**
  *	Global
  */

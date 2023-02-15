@@ -5,7 +5,7 @@
 get_header(); ?>
 
 <main class="quorum quorum--apartments">
-    <section class="subpageHeader">
+    <section class="subpageHeader subpageHeader--apartments">
         <div class="subpageHeader__box">
             <div class="content">
                 <p class="lead">Quorum Apartments</p>
@@ -29,7 +29,7 @@ get_header(); ?>
                         <p>Powierzchni</p>
                     </div>
                     <div class="info__pos">
-                        <h3>340</h3>
+                        <h3>341</h3>
                         <p>Dostępnych mieszkań</p>
                     </div>
                     <div class="info__pos">
@@ -40,7 +40,7 @@ get_header(); ?>
             </div>
             <div class="apOverview__images">
                 <div class="image">
-                    <img src="<?php echo get_template_directory_uri() . '/images/apartments/apartment.jpg'; ?>" />
+                    <img src="<?php echo get_template_directory_uri() . '/images/apartments/apartment.webp'; ?>" />
                     <div class="image__play">
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/play_btn.svg'; ?>" />
                     </div>
@@ -96,7 +96,6 @@ get_header(); ?>
                     $desc = get_sub_field('typesList_desc');
                     $rooms = get_sub_field('typesList_rooms');
                     $sqm = get_sub_field('typesList_sqm');
-                    $price = get_sub_field('typesList_price');
                     $available = get_sub_field('typesList_available');
                     $image = get_sub_field('typesList_image');
                 ?>
@@ -106,10 +105,9 @@ get_header(); ?>
                         <ul class="list">
                             <li><p class="label">Pomieszczenia</p><p class="value"><?php echo $rooms; ?></p></li>
                             <li><p class="label">Powierzchnia</p><p class="value"><?php echo $sqm; ?> m²</p></li>
-                            <li><p class="label">Cena</p><p class="value">od <?php echo $price; ?> za m²</p></li>
                             <li><p class="label">Dostępność</p><p class="value"><?php echo $available; ?></p></li>
                         </ul>
-                        <a href="#" class="btn"><span>Zapytaj o cenę</span></a>
+                        <a href="#meet" class="btn"><span>Zapytaj o cenę</span></a>
                     </div>
                     <div class="typeSlide__image">
                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
@@ -178,26 +176,27 @@ get_header(); ?>
                 <?php endwhile; ?>
             </div>
             <div class="homeApartments__actions">
-                <a href="#"><span>Więcej mieszkań</span></a>
+                <a href="https://resicapital.pl/znajdz-swoje-mieszkanie-na-sprzedaz/?cities[]=Wrocaw&cities[]=Wroc%C5%82aw&in_projects[]=QUORUM&onlyForSell=1&str=1"><span>Więcej mieszkań</span></a>
             </div>
         </div>
     </section>
 
-    <section class="homeForm">
+    <section id="meet" class="homeForm homeForm--apartments">
         <div class="homeForm__wrap">
             <form class="visitForm">
                 <div class="visitForm__heading">
                     <p class="lead">Quorum Apartments</p>
                     <h2>Umów wizytę</h2>
                 </div>
+                <div class="notices"></div>
                 <div class="visitForm__row">
-                    <input type="text" placeholder="Imię i nazwisko" name="visitName" />
+                    <input type="text" placeholder="Imię i nazwisko" name="visitName" required/>
                 </div>
                 <div class="visitForm__row">
-                    <input type="email" placeholder="Email" name="visitEmail" />
+                    <input type="email" placeholder="Email" name="visitEmail" required/>
                 </div>
                 <div class="visitForm__row">
-                    <input type="phone" placeholder="Telefon" name="visitPhone" />
+                    <input type="phone" placeholder="Telefon" name="visitPhone" required/>
                 </div>
                 <div class="visitForm__row">
                     <p>Interesują mnie:</p>

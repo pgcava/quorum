@@ -1,6 +1,31 @@
 (function($){
 
     /**
+     * Scroll to top
+     */
+    $(document).ready(function(){
+        if ($(document).scrollTop() >= 800) {
+            $('#scrollTop').addClass('visible');
+        } else {
+            $('#scrollTop').removeClass('visible');
+        }
+
+        $(document).scroll(function() {
+            if ($(document).scrollTop() >= 800) {
+                $('#scrollTop').addClass('visible');
+            } else {
+                $('#scrollTop').removeClass('visible');
+            }
+        });
+    });
+
+    $('#scrollTop').on('click', function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+    });
+
+    /**
      * Smooth scroll to anchor
      */
     $(document).on('click', 'a[href^="#"]', function (event) {
@@ -141,6 +166,73 @@
                         $('.apOverview__video').removeClass('ready');
                     }, 300);
                 }
+            }
+        });
+
+        // Contact form
+        function clearNotices(form){
+            $(form).find('.notices').html('');
+        }
+        function clearForm(form){
+            var inputs = $(form).find('input').not('input[type="radio"]');
+
+            $(inputs).each(function(){
+                $(this).val('');
+            });
+        }
+        function insertNotice(text, type, form){
+            var html = '<div class="notices__notice notices__notice--' + type + '"><p>' + text + '</p></div>';
+            $(form).find('.notices').html(html);
+        }
+        function validateForm(form){
+            var inputs = $(form).find('input').not('input[type="radio"]');
+            var status = true;
+
+            $(inputs).each(function(){
+                if($(this).val() === ''){
+                    status = false;
+                }
+            });
+
+            return status;
+        }
+
+        $('.visitForm').on('submit', function(e){
+            e.preventDefault();
+            var form = $(this);
+
+            clearNotices();
+
+            var validate = validateForm(form);
+            if(validate == true){
+                var data = {
+                    action: 'send_contact_form',
+                    name: form.find('input[name="visitName"]').val(),
+                    mail: form.find('input[name="visitEmail"]').val(),
+                    phone: form.find('input[name="visitPhone"]').val(),
+                    type: form.find('input[name="visitType"]').val(),
+                }
+                $.ajax({
+                    type: 'POST',
+                    url: quorum.ajaxurl,
+                    data: data,
+                    beforeSend: function(){
+                        form.addClass('loading');
+                    },
+                    success: function(response){
+                        console.log(response);
+                        form.removeClass('loading');
+
+                        if(response == '1'){
+                            insertNotice('Formularz został prawidłowo wysłany.', 'success', form);
+                            clearForm(form);
+                        }else{
+                            insertNotice('Wystąpił błąd podczas wysyłania formularza. Spróbuj ponownie później', 'error', form);
+                        }
+                    }
+                });
+            }else{
+                insertNotice('Uzupełnij prawidłowo wszystkie wymagane pola aby móc wysłać wiadomość.', 'error', form);
             }
         });
     });

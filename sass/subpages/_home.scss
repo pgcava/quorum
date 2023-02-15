@@ -1,7 +1,7 @@
 @use '../global/variables' as v;
 
 .homeHeader{
-    background-image: url('/wp-content/themes/quorum/images/homepage/homeHeader.webp');
+    background-image: url('/wp-content/themes/quorum/images/homepage/header_new.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -188,6 +188,16 @@
             background-color: #29284a;
             position: relative;
             z-index: 2;
+
+            &.vector{
+                background-color: #fff;
+                border: 1px solid #0000001c;
+
+                img{
+                    padding: 20px;
+                    background-color: inherit;
+                }
+            }
 
             &:after{
                 content: '';
@@ -597,6 +607,12 @@
                         bottom: -8px;
                     }
                 }
+
+                &.vector{    
+                    img{
+                        padding: 10px;
+                    }
+                }
             }
         }
         &__content{
@@ -659,6 +675,14 @@
                 img{
                     object-fit: contain;
                     background-color: inherit;
+                }
+
+                &.vector{
+                    background-color: #fff;
+    
+                    img{
+                        background-color: inherit;
+                    }
                 }
 
                 &--fixed{
@@ -1623,6 +1647,12 @@
     .visitForm{
         max-width: 640px;
         margin: 0 auto;
+        transition: ease .3s;
+
+        &.loading{
+            opacity: .5;
+            pointer-events: none;
+        }
 
         &__heading{
             margin: 0 0 40px;
@@ -1644,6 +1674,37 @@
                 color: #000;
                 margin: 0;
                 text-align: center;
+            }
+        }
+        .notices{
+            &__notice{
+                padding: 8px 14px 6px;
+                border-radius: 3px;
+                border: 1px solid;
+                margin: 0 0 30px;
+
+                p{
+                    font-size: 14px;
+                    line-height: 1.4;
+                    margin: 0;
+                }
+                
+                &--error{
+                    background-color: #f8d7da;
+                    border-color: #f5c6cb;
+
+                    p{
+                        color: #721c24;
+                    }
+                }
+                &--success{
+                    background-color: #d4edda;
+                    border-color: #c3e6cb;
+
+                    p{
+                        color: #155724;
+                    }
+                }
             }
         }
         &__row{
@@ -1841,6 +1902,9 @@
         .homeForm__divider{
             height: 600px;
         }
+    }
+    &--apartments{
+        background-image: url('/wp-content/themes/quorum/images/apartments/lobby3.webp');
     }
 }
 @media (max-width: 1199px){
@@ -2192,6 +2256,8 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        max-width: 980px;
+        margin: 0 auto;
 
         .teammate{
             width: 100%;
@@ -2224,6 +2290,31 @@
                     font-weight: 100;
                     margin: 0;
                 }
+                .contact{
+                    margin: 18px 0 0;
+
+                    &__row{
+                        display: flex;
+                        align-items: center;
+                        margin: 0 0 10px;
+                        transition: ease .3s;
+
+                        &:hover{
+                            opacity: .75;
+                        }
+
+                        img{
+                            max-width: 18px;
+                            margin-right: 8px;
+                        }
+                        p{
+                            font-size: 16px;
+                            color: #000;
+                            text-transform: none;
+                        }
+                    }
+                    
+                }
             }
         }
     }
@@ -2231,6 +2322,8 @@
 @media (max-width: 1629px){
     .homeTeam{
         &__list{
+            max-width: 700px;
+
             .teammate{
                 max-width: 340px;
             }
@@ -2240,6 +2333,8 @@
 @media (max-width: 1199px){
     .homeTeam{
         &__list{
+            max-width: 600px;
+
             .teammate{
                 max-width: 290px;
 
@@ -2250,6 +2345,13 @@
                     }
                     p{
                         font-size: 14px;
+                    }
+                    .contact{
+                        &__row{
+                            p{
+                                font-size: 14px;
+                            }
+                        }
                     }
                 }
             }
@@ -2270,6 +2372,8 @@
             }
         }
         &__list{
+            max-width: 460px;
+
             .teammate{
                 max-width: 220px;
             }
