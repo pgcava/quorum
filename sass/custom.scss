@@ -64,3 +64,86 @@ a{
 	outline: none !important;
 	text-decoration: none;
 }
+
+.quorumModal{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+	opacity: 0;
+	transition: ease .3s;
+	z-index: 999999999;
+  }
+  .quorumModal.quorumModal--ready{
+	opacity: 1;
+	pointer-events: all;
+  }
+  .quorumModal.quorumModal--active .quorumModal__wrap{
+	opacity: 1;
+  }
+  .quorumModal__wrap{
+	max-width: 600px;
+	max-height: calc(100vh - 20px);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	position: relative;
+	opacity: 0;
+	transition: ease .3s;
+  }
+  .quorumModal__wrap a{
+	display: flex;
+	max-height: inherit;
+	width: 100%;
+	height: 100%;
+  }
+  .quorumModal__wrap a img{
+	max-height: inherit;
+	width: 100%;
+  }
+  .quorumModal__close{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+	right: -40px;
+	top: -40px;
+	opacity: 1;
+	cursor: pointer;
+	transition: ease .3s;
+  }
+  .quorumModal__close:hover{
+	background-color: #f7f7f7;
+  }
+  .quorumModal__close:hover img{
+	opacity: .5;
+  }
+  .quorumModal__close img{
+	width: 20px;
+	height: 20px;
+	display: block;
+	transition: ease .3s;
+  }
+  @media (max-width: 640px){
+	.quorumModal__wrap{
+	  max-width: calc(100% - 30px);
+	  margin: 0 auto;
+	}
+	.quorumModal__close{
+	  width: 25px;
+	  height: 25px;
+	  right: 0;
+	  top: 0;
+	}
+	.quorumModal__close img{
+	  width: 15px;
+	  height: 15px;
+	}
+  }

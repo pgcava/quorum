@@ -236,4 +236,35 @@
             }
         });
     });
+
+    /**
+     * Break modal
+     */
+    $(document).ready(function(){
+        setTimeout(function(){
+            $('.quorumModal').addClass('quorumModal--ready');
+            setTimeout(function(){
+                $('.quorumModal').addClass('quorumModal--active');  
+            }, 300);
+        }, 1000);
+
+        $('.quorumModal__close').on('click', function(){
+            $('.quorumModal').removeClass('quorumModal--active');
+            setTimeout(function(){
+                $('.quorumModal').removeClass('quorumModal--ready');  
+            }, 300);
+        });
+
+        $(document).mouseup(function(e){
+            var container = $('.quorumModal__wrap');
+            if (!container.is(e.target) && container.has(e.target).length === 0){
+                if($('.quorumModal').hasClass('quorumModal--active')){
+                    $('.quorumModal').removeClass('quorumModal--active');
+                    setTimeout(function(){
+                        $('.quorumModal').removeClass('quorumModal--ready');  
+                    }, 300);
+                }
+            }
+        });
+    });
 }(jQuery));

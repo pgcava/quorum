@@ -70,6 +70,16 @@
 			</div>
 		</div>
 	</footer><!-- #colophon -->
+	<div class="quorumModal">
+		<div class="quorumModal__wrap">
+			<div class="quorumModal__close">
+				<img src="<?php echo get_template_directory_uri() . '/images/quorum_modal_close.svg'; ?>"/>
+			</div>
+			<a href="https://quorumapartments.pl/">
+				<img src="<?php echo get_template_directory_uri() . '/images/break_modal.jpg'; ?>"/>
+			</a>
+		</div>
+	</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
