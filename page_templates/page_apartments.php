@@ -176,7 +176,7 @@ get_header(); ?>
                 <?php endwhile; ?>
             </div>
             <div class="homeApartments__actions">
-                <a href="https://resicapital.pl/znajdz-swoje-mieszkanie-na-sprzedaz/?cities[]=Wrocaw&cities[]=Wroc%C5%82aw&in_projects[]=QUORUM&onlyForSell=1&str=1"><span>Więcej mieszkań</span></a>
+                <a href="https://katalog.resicapital.pl/?investment=2"><span>Więcej mieszkań</span></a>
             </div>
         </div>
     </section>

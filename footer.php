@@ -22,11 +22,11 @@
 				<div class="contact">
 					<div class="contact__row">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/marker_ico.svg'; ?>" />
-						<p>Inwestycja - <a href="https://goo.gl/maps/CY1kmm1qRN3UE1Qf8" target="_blank">Gen. Władysława Sikorskiego 13, 53-659 Wrocław</a></p>
+						<p>Inwestycja - <a href="https://goo.gl/maps/CY1kmm1qRN3UE1Qf8" target="_blank">Gen. Sikorskiego 13, 53-659 Wrocław</a></p>
 					</div>
 					<div class="contact__row">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/marker_ico.svg'; ?>" />
-						<p>Biuro sprzedaży - <a href="https://goo.gl/maps/nDzPnLGHDnJaDa4u7" target="_blank">Fabryczna 6, 53-609 Wrocław</a></p>
+						<p>Biuro sprzedaży - <a href="https://goo.gl/maps/wX3C96BNxC55ZFqC6" target="_blank">Gen. Sikorskiego 26, Quorum D, 53-659 Wrocław</a></p>
 					</div>
 					<div class="contact__row">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>" />
@@ -70,7 +70,7 @@
 			</div>
 		</div>
 	</footer><!-- #colophon -->
-	<div class="quorumModal">
+<!-- 	<div class="quorumModal">
 		<div class="quorumModal__wrap">
 			<div class="quorumModal__close">
 				<img src="<?php echo get_template_directory_uri() . '/images/quorum_modal_close.svg'; ?>"/>
@@ -79,7 +79,7 @@
 				<img src="<?php echo get_template_directory_uri() . '/images/break_modal.jpg'; ?>"/>
 			</a>
 		</div>
-	</div>
+	</div> -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

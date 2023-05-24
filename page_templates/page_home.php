@@ -118,7 +118,7 @@ get_header(); ?>
                 <?php endwhile; ?>
             </div>
             <div class="homeApartments__actions">
-                <a href="https://resicapital.pl/znajdz-swoje-mieszkanie-na-sprzedaz/?cities[]=Wrocaw&cities[]=Wroc%C5%82aw&in_projects[]=QUORUM&onlyForSell=1&str=1"><span>Więcej mieszkań</span></a>
+                <a href="https://katalog.resicapital.pl/?investment=2"><span>Więcej mieszkań</span></a>
             </div>
         </div>
     </section>
@@ -299,25 +299,6 @@ get_header(); ?>
                             <a href="mailto:marta.skrzypek@cavatina.pl" class="contact__row">
                                 <img src="<?php echo get_template_directory_uri() . '/images/icons/mail_ico.svg'; ?>">
                                 <p>marta.skrzypek@cavatina.pl</p>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                <article class="teammate">
-                    <div class="teammate__image">
-                        <img src="<?php echo get_template_directory_uri() . '/images/homepage/teammate_03_new.webp'; ?>"/>
-                    </div>
-                    <div class="teammate__info">
-                        <h3>Roman Dąbrowski</h3>
-                        <p>Specjalista ds. sprzedaży mieszkań</p>
-                        <div class="contact">
-                            <a href="tel:+48530044913" class="contact__row">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>">
-                                <p>+48 530 044 913</p>
-                            </a>
-                            <a href="mailto:roman.dabrowski@cavatina.pl" class="contact__row">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/mail_ico.svg'; ?>">
-                                <p>roman.dabrowski@cavatina.pl</p>
                             </a>
                         </div>
                     </div>

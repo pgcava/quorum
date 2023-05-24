@@ -6,6 +6,7 @@
             "key": "field_62e0da7d3abcb",
             "label": "Tytuł strony H1",
             "name": "page_h1_heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -44,8 +45,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1658909855
+    "modified": 1681213172
 }
