@@ -309,7 +309,7 @@ get_header(); ?>
                     </div>
                     <div class="teammate__info">
                         <h3>Adrianna Lisiecka</h3>
-                        <p>Manager ds. sprzedaży mieszkań</p>
+                        <p>Specjalista ds. sprzedaży mieszkań</p>
                         <div class="contact">
                             <a href="tel:+48533716005" class="contact__row">
                                 <img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>">
