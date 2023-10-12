@@ -303,6 +303,25 @@ get_header(); ?>
                         </div>
                     </div>
                 </article>
+                <article class="teammate">
+                    <div class="teammate__image">
+                        <img src="<?php echo get_template_directory_uri() . '/images/homepage/teammate_03.webp'; ?>"/>
+                    </div>
+                    <div class="teammate__info">
+                        <h3>Adrianna Lisiecka</h3>
+                        <p>Manager ds. sprzedaży mieszkań</p>
+                        <div class="contact">
+                            <a href="tel:+48533716005" class="contact__row">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>">
+                                <p>+48 533 716 005</p>
+                            </a>
+                            <a href="mailto:adrianna.lisiecka@cavatina.pl" class="contact__row">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/mail_ico.svg'; ?>">
+                                <p>adrianna.lisiecka@cavatina.pl</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>

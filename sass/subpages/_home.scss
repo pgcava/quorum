@@ -2262,6 +2262,11 @@
         .teammate{
             width: 100%;
             max-width: 480px;
+            margin-right: 35px;
+
+            &:last-of-type{
+                margin-right: 0;
+            }
 
             &__image{
                 display: flex;
@@ -2337,6 +2342,7 @@
 
             .teammate{
                 max-width: 290px;
+                margin-right: 20px;
 
                 &__info{
                     h3{

@@ -2468,6 +2468,10 @@
 .homeTeam__list .teammate {
   width: 100%;
   max-width: 480px;
+  margin-right: 35px;
+}
+.homeTeam__list .teammate:last-of-type {
+  margin-right: 0;
 }
 .homeTeam__list .teammate__image {
   display: flex;
@@ -2530,6 +2534,7 @@
   }
   .homeTeam__list .teammate {
     max-width: 290px;
+    margin-right: 20px;
   }
   .homeTeam__list .teammate__info h3 {
     font-size: 21px;
