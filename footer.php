@@ -30,7 +30,7 @@
 					</div>
 					<div class="contact__row">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>" />
-						<p>Mieszkania: <a href="tel:+48530052270">+48 530 052 270</a> lub <a href="tel:+48530044913">+48 530 044 913</a></p>
+						<p>Mieszkania: <a href="tel:+48530052270">+48 530 052 270</a> lub <a href="tel:+48533716005">+48 533 716 005</a></p>
 					</div>
 					<div class="contact__row">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>" />
